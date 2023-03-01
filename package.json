@@ -1,0 +1,30 @@
+{
+  "name": "advanced-css-and-sass_Trillo",
+  "version": "1.0.0",
+  "description": "Trillo Project:",
+  "source": "./src/index.html",
+  "targets": {
+    "default": {
+      "distDir": "../dist"
+    }
+  },
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uziel78/advanced-css-and-sass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uziel78/advanced-css-and-sass/issues"
+  },
+  "homepage": "https://github.com/uziel78/advanced-css-and-sass#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2"
+  }
+}
