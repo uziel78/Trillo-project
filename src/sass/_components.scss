@@ -244,7 +244,7 @@
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--line);
 
   &__heading {
     font-size: 2.23rem;
@@ -342,13 +342,80 @@
 }
 
 ////////////////////////////////////////
-// OVERVIEW
+// PARAGRAPH
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
 
 ////////////////////////////////////////
-// OVERVIEW
+// LIST
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+  }
+
+  // including an svg image via CSS (note that by default color cannot be changed when used like this)
+  &__item::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.7rem;
+
+    //older browsers
+    // background-image: url(../img/chevron-thin-right.svg);
+    // background-size: cover;
+
+    //newer browsers -masks (defines an area where you can look what's behind the area)
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover;
+  }
+}
 
 ////////////////////////////////////////
-// OVERVIEW
+// RECCOMEND
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center;
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
+  }
+
+  &__photo {
+    //overraide default boder-box to allow padding not to creep into pictures
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+  }
+}
 
 ////////////////////////////////////////
 // OVERVIEW
