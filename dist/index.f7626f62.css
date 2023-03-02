@@ -55,7 +55,7 @@ body {
 
 .header {
   height: 7rem;
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: 1px solid var(--color-grey-light-2);
   background-color: #fff;
   justify-content: space-between;
   align-items: center;
@@ -247,6 +247,111 @@ body {
   text-align: center;
   padding: 2.5rem;
   font-size: 1.2rem;
+}
+
+.gallery {
+  display: flex;
+}
+
+.gallery__photo {
+  width: 100%;
+  display: block;
+}
+
+.overview {
+  border-bottom: 1px solid var(--color-grey-light-2);
+  align-items: center;
+  display: flex;
+}
+
+.overview__heading {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1.5rem 3rem;
+  font-size: 2.23rem;
+  font-weight: 300;
+}
+
+.overview__stars {
+  margin-right: auto;
+  display: flex;
+}
+
+.overview__icon-star, .overview__icon-location {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: var(--color-primary);
+}
+
+.overview__location {
+  align-items: center;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+.overview__icon-location {
+  margin-right: .5rem;
+}
+
+.overview__rating {
+  background-color: var(--color-primary);
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  align-items: center;
+  margin-left: 3rem;
+  padding: 0 2.25rem;
+  display: flex;
+}
+
+.overview__rating-average {
+  margin-bottom: -3px;
+  font-size: 2.25rem;
+  font-weight: 300;
+}
+
+.overview__rating-count {
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+.btn-inline {
+  color: var(--color-primary);
+  font-size: inherit;
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+  border-bottom: 1px solid;
+  padding-bottom: 2px;
+  transition: all .2s;
+  display: inline-block;
+}
+
+.btn-inline:hover {
+  color: var(--color-grey-dark-1);
+}
+
+.btn-inline:focus {
+  outline: none;
+  animation: 1s infinite pulsate;
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: none;
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem #000;
+  }
+
+  100% {
+    box-shadow: none;
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=index.f7626f62.css.map */
