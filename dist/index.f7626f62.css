@@ -535,13 +535,21 @@ body {
   content: "";
   height: 1rem;
   width: 1rem;
-  background-color: var(--color-primary);
+  background-image: url("chevron-thin-right.7f986135.svg");
+  background-size: cover;
   margin-right: .7rem;
   display: inline-block;
-  -webkit-mask-image: url("chevron-thin-right.7f986135.svg");
-  mask-image: url("chevron-thin-right.7f986135.svg");
-  -webkit-mask-size: cover;
-  mask-size: cover;
+}
+
+@supports ((-webkit-mask-image: url())) or ((-webkit-mask-image: url()) or (mask-image: url())) {
+  .list__item:before {
+    background-color: var(--color-primary);
+    background-image: none;
+    -webkit-mask-image: url("chevron-thin-right.7f986135.svg");
+    mask-image: url("chevron-thin-right.7f986135.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+  }
 }
 
 .recommend {

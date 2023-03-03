@@ -5,7 +5,7 @@ https://trillo.netlify.app/ (hosted her by original course creator for a quick r
 
 "npm run dev" to start project on local development server
 
-The project focuses on some more advanced css and sass consepts in general, but also features the following:
+The project focuses on some more advanced css and sass consepts in general, but notably features the following key features:
 
 - flexbox-based
 - CSS variables, including currentColor CSS variable
@@ -14,4 +14,5 @@ The project focuses on some more advanced css and sass consepts in general, but 
 - advanced flexbox alignment techniques (on navigation)
 - infinite animation
 - CSS masks
--
+- feature queries for newer or older browsers added (@support)
+- button with changing txt on animation
