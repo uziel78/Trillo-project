@@ -163,6 +163,14 @@ body {
   display: flex;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .search {
+    background-color: var(--color-grey-light-2);
+    flex: 0 0 100%;
+    order: 1;
+  }
+}
+
 .search__input {
   font-family: inherit;
   font-size: inherit;
@@ -265,12 +273,29 @@ body {
   list-style: none;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .side-nav {
+    margin: 0;
+    display: flex;
+  }
+}
+
 .side-nav__item {
   position: relative;
 }
 
 .side-nav__item:not(:last-child) {
   margin-bottom: .5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav__item:not(:last-child) {
+    margin: 0;
+  }
+
+  .side-nav__item {
+    flex: 1;
+  }
 }
 
 .side-nav__item:before {
@@ -305,6 +330,20 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    justify-content: center;
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    flex-direction: column;
+    padding: 1.5rem .5rem;
+  }
+}
+
 .side-nav__icon {
   width: 1.75rem;
   height: 1.75rem;
@@ -312,11 +351,26 @@ body {
   margin-right: 2rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .side-nav__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: .7rem;
+    margin-right: 0;
+  }
+}
+
 .legal {
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
   font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .legal {
+    display: none;
+  }
 }
 
 .gallery {
@@ -340,6 +394,13 @@ body {
   padding: 1.5rem 3rem;
   font-size: 2.23rem;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .overview__heading {
+    padding: 1.25rem 2rem;
+    font-size: 1.8rem;
+  }
 }
 
 .overview__stars {
@@ -375,15 +436,33 @@ body {
   display: flex;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .overview__rating {
+    padding: 0 1.5rem;
+  }
+}
+
 .overview__rating-average {
   margin-bottom: -3px;
   font-size: 2.25rem;
   font-weight: 300;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .overview__rating-average {
+    font-size: 1.8rem;
+  }
+}
+
 .overview__rating-count {
   text-transform: uppercase;
   font-size: .8rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .overview__rating-count {
+    font-size: .5rem;
+  }
 }
 
 .btn-inline {
@@ -476,6 +555,10 @@ body {
   margin-right: auto;
 }
 
+.recommend__friends {
+  display: flex;
+}
+
 .recommend__photo {
   box-sizing: content-box;
   height: 4rem;
@@ -485,7 +568,7 @@ body {
 }
 
 .recommend__photo:not(:last-child) {
-  margin-right: -1.5rem;
+  margin-right: -2rem;
 }
 
 .review {
@@ -495,6 +578,13 @@ body {
   padding: 3rem;
   position: relative;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .review {
+    margin-bottom: 3rem;
+    padding: 2rem;
+  }
 }
 
 .review__text {
